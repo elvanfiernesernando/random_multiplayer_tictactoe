@@ -98,7 +98,7 @@ io.on("connection", async (socket) => {
 
         socket.leave(socket.rooms.values().next().value);
 
-        if (roomsList.size === 0) {
+        if (roomsList.size === 0 || userList.size % 2 !== 0) {
             socket.join("room" + (roomsList.size + 1))
             socket.emit("waitingOpponent");
         } else {
