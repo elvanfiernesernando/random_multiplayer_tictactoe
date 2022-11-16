@@ -98,7 +98,16 @@ io.on("connection", async (socket) => {
 
         socket.leave(socket.rooms.values().next().value);
 
-        if (roomsList.size === 0 || userList.size % 2 !== 0) {
+        const clientsInsideRoom = [];
+
+        roomsList.forEach((value, key) => {
+            value.forEach((v, k) => {
+                clientsInsideRoom.push(v)
+            })
+            // console.info(value.values().next().value)
+        });
+
+        if (roomsList.size === 0 || clientsInsideRoom.length % 2 === 0) {
             socket.join("room" + (roomsList.size + 1))
             socket.emit("waitingOpponent");
         } else {
@@ -138,12 +147,12 @@ io.on("connection", async (socket) => {
             })
         }
 
-        console.info("Jumlah user: " + userList.size)
-        console.info("Jumlah room: " + roomsList.size)
+        // console.info("Jumlah user: " + userList.size)
+        // console.info("Jumlah room: " + roomsList.size)
 
     })
-    console.info("Jumlah user: " + userList.size)
-    console.info("Jumlah room: " + roomsList.size)
+    // console.info("Jumlah user: " + userList.size)
+    // console.info("Jumlah room: " + roomsList.size)
 
     socket.on("boardClick", (data) => {
 
