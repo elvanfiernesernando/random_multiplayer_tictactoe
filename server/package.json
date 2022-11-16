@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "random multiplayer tic tac toe backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon ./server.js"
+  },
+  "author": "elvanfiernesernando",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^4.5.0",
+    "socket.io": "^4.5.3"
+  }
+}
