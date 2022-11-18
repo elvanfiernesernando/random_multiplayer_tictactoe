@@ -15,6 +15,12 @@
 
 ![App Screenshot](https://i.ibb.co/GV5fd7B/Group-1-1.png)
 
+## Demo
+
+Click image below to play the demo video
+
+[![Watch the video](https://img.youtube.com/vi/fzPzlagjPeM/hqdefault.jpg)](https://youtube.com/shorts/fzPzlagjPeM?feature=share)
+
 ## Installation
 
 To install this project run this command:
